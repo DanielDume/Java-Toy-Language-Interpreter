@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="735.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerGUI">
+    <children>
+        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <Label fx:id="labelCurrentNumber" text="Number of program states: " />
+                <Label fx:id="prgStatesCnt" />
+            </children>
+        </HBox>
+        <Label text="Heap:" />
+        <TableView fx:id="heapTableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Adress" />
+                <TableColumn editable="false" prefWidth="75.0" text="Value" />
+            </columns>
+        </TableView>
+        <Label text="Output:" />
+        <ListView fx:id="outListView" prefHeight="200.0" prefWidth="200.0" />
+        <Label text="Files:" />
+        <TableView fx:id="fileTableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="125.0" text="Variable name" />
+                <TableColumn editable="false" prefWidth="129.0" text="File Name" />
+            </columns>
+        </TableView>
+        <Label text="Program States:" />
+        <ListView fx:id="prgStateListView" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="selectedPrg" text="Selected prgState ID :" />
+        <Label text="Symbol table: " />
+        <TableView fx:id="symTableView" prefHeight="200.0" prefWidth="200.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Symbol" />
+                <TableColumn prefWidth="75.0" text="Value" />
+            </columns>
+        </TableView>
+        <Label text="Execution Stack:" />
+        <ListView fx:id="exeStackListView" prefHeight="200.0" prefWidth="200.0" />
+      <Label prefHeight="17.0" prefWidth="130.0" text="Latch table:" />
+      <TableView fx:id="newListView" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="String" />
+          <TableColumn prefWidth="75.0" text="Integer" />
+        </columns>
+      </TableView>
+      <TableView fx:id="writeFileView" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="FIlename" />
+          <TableColumn prefWidth="75.0" text="Owner state" />
+        </columns>
+      </TableView>
+        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#allStepsGUI" prefHeight="67.0" prefWidth="702.0" text="One Step" />
+    </children>
+</VBox>
